@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #f3f0e8;
+  --color-card: #fbf9f4;
+  --color-ink: #1c2430;
+  --color-muted: #5c6670;
+  --color-aegean: #1a5278;
+  --color-aegean-deep: #0f3a56;
+  --color-line: #ddd4c6;
+  --color-stone: #e7e2d6;
+  --color-olive: #3e5340;
+  --color-wine: #6d3d52;
+  --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif), ui-serif, Georgia, serif;
+}
+
+html {
+  background: #f3f0e8;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f3f0e8;
+  color: #1c2430;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid #1a5278;
+  outline-offset: 2px;
+}
+
+.meander {
+  height: 10px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 6px,
+    rgba(26, 82, 120, 0.55) 6px 8px,
+    transparent 8px 14px,
+    rgba(62, 83, 64, 0.45) 14px 16px,
+    transparent 16px 22px
+  );
+  border-top: 2px solid rgba(26, 82, 120, 0.45);
+  border-bottom: 2px solid rgba(26, 82, 120, 0.45);
+}
+
+.prose-greece p {
+  line-height: 1.85;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
