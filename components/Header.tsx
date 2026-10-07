@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SisterBar } from "@/components/SisterSites";
 import { VisitorCounter } from "@/components/VisitorCounter";
-import { MYTH_NAME, MYTH_URL, NAV, ROME_NAME, ROME_URL, SITE_NAME, SITE_NAME_EN } from "@/lib/site";
+import { NAV, SITE_NAME, SITE_NAME_EN } from "@/lib/site";
 
 function active(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
@@ -28,12 +29,6 @@ export function Header() {
           </span>
         </Link>
         <div className="ml-auto flex items-center gap-3">
-          <a href={MYTH_URL} className="hidden text-xs text-muted underline decoration-line underline-offset-4 hover:text-aegean sm:inline" rel="noopener noreferrer">
-            {MYTH_NAME}
-          </a>
-          <a href={ROME_URL} className="hidden text-xs text-muted underline decoration-line underline-offset-4 hover:text-aegean md:inline" rel="noopener noreferrer">
-            {ROME_NAME}
-          </a>
           <VisitorCounter />
         </div>
       </div>
@@ -51,10 +46,8 @@ export function Header() {
             </Link>
           );
         })}
-        <a href={MYTH_URL} className="shrink-0 rounded-full px-3 py-2 text-sm text-muted hover:bg-stone hover:text-ink sm:hidden" rel="noopener noreferrer">
-          {MYTH_NAME}
-        </a>
       </nav>
+      <SisterBar />
       <div className="meander opacity-70" aria-hidden />
     </header>
   );

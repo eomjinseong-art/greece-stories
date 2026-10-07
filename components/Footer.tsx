@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CoupangBanner } from "@/components/CoupangBanner";
-import { BRAND_LINE, EGYPT_NAME, EGYPT_URL, MYTH_NAME, MYTH_URL, NAV, ROME_NAME, ROME_URL, SITE_NAME } from "@/lib/site";
+import { SisterList } from "@/components/SisterSites";
+import { BRAND_LINE, NAV, SITE_NAME } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -15,7 +16,8 @@ export function Footer() {
           </p>
           <p>전설은 전설이라고 적습니다. 영화 제목과 상표는 각 권리자의 것입니다. 영화를 볼 수 있는 불법 사이트는 안내하지 않습니다.</p>
         </div>
-        <nav className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs">
+        <SisterList />
+        <nav aria-label="주요 메뉴" className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs">
           <Link href="/" className="underline decoration-line underline-offset-4 hover:text-aegean">
             홈
           </Link>
@@ -24,15 +26,6 @@ export function Footer() {
               {item.label}
             </Link>
           ))}
-          <a href={MYTH_URL} className="underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
-            {MYTH_NAME}
-          </a>
-          <a href={ROME_URL} className="underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
-            {ROME_NAME}
-          </a>
-          <a href={EGYPT_URL} className="underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
-            {EGYPT_NAME}
-          </a>
         </nav>
       </div>
     </footer>
