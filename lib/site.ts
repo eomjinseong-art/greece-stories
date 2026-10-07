@@ -16,6 +16,9 @@ export const ROME_NAME = "로마이야기";
 export const EGYPT_URL = "https://egypt-stories.vercel.app";
 export const EGYPT_NAME = "이집트이야기";
 
+export const TIMELINE_URL = "https://nadoo-timeline.vercel.app";
+export const TIMELINE_NAME = "나두연표";
+
 export const SISTER_LABEL = "나두 역사·신화";
 
 export const SISTERS = [
@@ -42,6 +45,14 @@ export const SISTERS = [
     button: EGYPT_NAME,
     note: "파라오와 나일강, 선왕조에서 클레오파트라.",
     body: "같은 집안의 자매 사이트입니다. 이집트의 긴 역사는 이 폴리스 글과 따로, 그 주소에서 이어 읽습니다.",
+  },
+  {
+    href: TIMELINE_URL,
+    name: TIMELINE_NAME,
+    en: "TIMELINE",
+    button: TIMELINE_NAME,
+    note: "세계사 vs 한반도, 같은 해 무슨 일이?",
+    body: "세계사와 한반도를 같은 해에 나란히 놓은 비교 연표. 폴리스의 시대에 한반도에서는 무슨 일이 있었는지 봅니다.",
   },
 ] as const;
 
