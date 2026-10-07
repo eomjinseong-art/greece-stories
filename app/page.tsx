@@ -5,7 +5,7 @@ import { people } from "@/data/people";
 import { poleis } from "@/data/poleis";
 import { wars } from "@/data/wars";
 import { jsonLd, pageMetadata, websiteLd } from "@/lib/seo";
-import { BRAND_LINE, EGYPT_NAME, EGYPT_URL, HOME_SECTIONS, MYTH_NAME, MYTH_URL, ROME_NAME, ROME_URL, SITE_SUB, SITE_TAGLINE } from "@/lib/site";
+import { BRAND_LINE, HOME_SECTIONS, SISTER_LABEL, SISTERS, SITE_SUB, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "홈",
@@ -22,27 +22,6 @@ const PATH = [
   { href: "/wars/peloponnesian-war", label: "아테네와 스파르타가 싸운 이유" },
   { href: "/people/alexander", label: "알렉산드로스 원정 뒤 무엇이 갈라졌나" },
   { href: "/myth-links", label: "신화 본문은 나두신화로" },
-];
-
-const SISTERS = [
-  {
-    href: MYTH_URL,
-    en: "MYTH",
-    title: MYTH_NAME,
-    body: "신들의 이야기, 트로이 전쟁, 그리스 신과 로마 신의 이름 차이. 역사 글이 아니라 신화 사전입니다.",
-  },
-  {
-    href: ROME_URL,
-    en: "ROME",
-    title: ROME_NAME,
-    body: "왕정·공화정·제정, 포에니 전쟁, 클레오파트라. 그리스 폴리스가 로마의 속주가 된 뒤의 이야기입니다.",
-  },
-  {
-    href: EGYPT_URL,
-    en: "EGYPT",
-    title: EGYPT_NAME,
-    body: "같은 집안의 자매 사이트입니다. 이집트의 긴 역사는 이 폴리스 글과 따로, 그 주소에서 이어 읽습니다.",
-  },
 ];
 
 export default function Home() {
@@ -62,12 +41,11 @@ export default function Home() {
           <Link href="/origins" className="rounded-full bg-aegean px-4 py-2 text-white hover:bg-aegean-deep">
             시대부터 보기
           </Link>
-          <a href={MYTH_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-aegean" rel="noopener noreferrer">
-            {MYTH_NAME}에서 신화 읽기
-          </a>
-          <a href={ROME_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-aegean" rel="noopener noreferrer">
-            {ROME_NAME}
-          </a>
+          {SISTERS.map((site) => (
+            <a key={site.href} href={site.href} className="rounded-full border border-line bg-card px-4 py-2 hover:border-aegean" rel="noopener noreferrer">
+              {site.button}
+            </a>
+          ))}
         </div>
       </section>
 
@@ -109,7 +87,7 @@ export default function Home() {
 
       <section className="mt-12" aria-labelledby="sisters-heading">
         <h2 id="sisters-heading" className="font-serif text-2xl text-ink">
-          자매 사이트
+          {SISTER_LABEL}
         </h2>
         <p className="mt-1 text-sm text-muted">신화, 로마의 역사, 그리고 이집트이야기는 같은 나두의 다른 방입니다.</p>
         <div className="mt-4 grid gap-4 lg:grid-cols-3">
@@ -121,9 +99,9 @@ export default function Home() {
               className="group rounded-lg border border-line bg-card p-5 transition hover:border-aegean hover:shadow-sm"
             >
               <p className="text-[11px] tracking-[0.16em] text-aegean">{site.en}</p>
-              <h3 className="mt-1 font-serif text-xl text-ink group-hover:text-aegean">{site.title}</h3>
+              <h3 className="mt-1 font-serif text-xl text-ink group-hover:text-aegean">{site.name}</h3>
               <p className="mt-2 text-sm leading-6 text-muted">{site.body}</p>
-              <p className="mt-3 text-sm text-aegean">{site.title} 보기 →</p>
+              <p className="mt-3 text-sm text-aegean">{site.name} 보기 →</p>
             </a>
           ))}
         </div>

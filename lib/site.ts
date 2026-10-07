@@ -16,6 +16,35 @@ export const ROME_NAME = "로마이야기";
 export const EGYPT_URL = "https://egypt-stories.vercel.app";
 export const EGYPT_NAME = "이집트이야기";
 
+export const SISTER_LABEL = "나두 역사·신화";
+
+export const SISTERS = [
+  {
+    href: MYTH_URL,
+    name: MYTH_NAME,
+    en: "MYTH",
+    button: "나두신화에서 신화 읽기",
+    note: "신들의 이야기, 트로이 전쟁, 그리스 신과 로마 신의 이름.",
+    body: "신들의 이야기, 트로이 전쟁, 그리스 신과 로마 신의 이름 차이. 역사 글이 아니라 신화 사전입니다.",
+  },
+  {
+    href: ROME_URL,
+    name: ROME_NAME,
+    en: "ROME",
+    button: ROME_NAME,
+    note: "왕정·공화정·제정, 포에니 전쟁, 클레오파트라.",
+    body: "왕정·공화정·제정, 포에니 전쟁, 클레오파트라. 그리스 폴리스가 로마의 속주가 된 뒤의 이야기입니다.",
+  },
+  {
+    href: EGYPT_URL,
+    name: EGYPT_NAME,
+    en: "EGYPT",
+    button: EGYPT_NAME,
+    note: "파라오와 나일강, 선왕조에서 클레오파트라.",
+    body: "같은 집안의 자매 사이트입니다. 이집트의 긴 역사는 이 폴리스 글과 따로, 그 주소에서 이어 읽습니다.",
+  },
+] as const;
+
 export const COUPANG_URL = "https://link.coupang.com/a/hsdzLh1vB6";
 
 export const NAV = [
