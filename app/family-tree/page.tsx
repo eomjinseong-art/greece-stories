@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Elsewhere } from "@/components/Elsewhere";
 import { FamilyTreeView } from "@/components/FamilyTreeView";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
+import { OtherFamilyTrees } from "@/components/SisterSites";
 import { DISPUTES, NAME_NOTES, TREES, focusHref, relationsOf } from "@/data/family-tree";
 import { personBySlug } from "@/data/people";
 import { breadcrumbLd, itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
@@ -59,10 +61,12 @@ export default function FamilyTreePage() {
         <p className="mt-2 max-w-3xl text-sm leading-7 text-muted">
           제우스와 티탄, 올림포스 신의 가계는 이 사이트에 다시 그리지 않습니다. 신화 사전인 {MYTH_NAME}의 가족관계도에서 세대와 다른 전승을 볼 수 있습니다. 아래는 역사 글과 닿는 사람의 가문만 다룹니다.
         </p>
-        <a href={`${MYTH_URL}/family-tree`} className="mt-3 inline-block text-sm text-olive underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
+        <a href={`${MYTH_URL}/family-tree`} className="mt-3 inline-block text-sm text-olive underline decoration-line underline-offset-4 hover:text-aegean" target="_blank" rel="noopener noreferrer">
           {MYTH_NAME} 가족관계도 보기
         </a>
       </aside>
+
+      <OtherFamilyTrees />
 
       <FamilyTreeView />
 
@@ -81,7 +85,7 @@ export default function FamilyTreePage() {
             {tree.id === "successors" ? (
               <p className="mt-2 text-sm leading-7">
                 프톨레마이오스 왕조의 이집트 역사는{" "}
-                <a href={`${EGYPT_URL}/origins#ptolemaic`} className="text-olive underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
+                <a href={`${EGYPT_URL}/origins#ptolemaic`} className="text-olive underline decoration-line underline-offset-4 hover:text-aegean" target="_blank" rel="noopener noreferrer">
                   {EGYPT_NAME}
                 </a>
                 에서 이어 읽습니다. 클레오파트라 7세는 이 첫 세대의 딸이 아닙니다.
@@ -111,7 +115,7 @@ export default function FamilyTreePage() {
                         {node.years ? <span className="mt-0.5 block text-xs text-aegean">{node.years}</span> : null}
                         {node.href ? (
                           node.href.startsWith("http") ? (
-                            <a href={node.href} className="mt-0.5 block text-aegean" rel="noopener noreferrer">
+                            <a href={node.href} className="mt-0.5 block text-aegean" target="_blank" rel="noopener noreferrer">
                               {node.linkLabel ?? EGYPT_NAME}
                             </a>
                           ) : (
@@ -122,6 +126,7 @@ export default function FamilyTreePage() {
                         ) : null}
                         <span className="mt-0.5 block text-ink">{node.summary}</span>
                         {node.note ? <span className="mt-0.5 block text-xs leading-5 text-wine">{node.note}</span> : null}
+                        <Elsewhere links={node.also} />
                         <span className="mt-1 block text-xs leading-5 text-muted">
                           <Kin treeId={tree.id} label="부모" people={rel.parents} />
                           <Kin treeId={tree.id} label="전승으로 갈리는 부모" people={rel.variantParents} />

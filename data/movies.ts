@@ -1,4 +1,5 @@
 import type { Movie, MovieTopic } from "@/data/types";
+import { EGYPT_URL, ILIAD_URL, MYTH_URL, PERSIA_URL, PHILOSOPHY_URL } from "@/lib/site";
 
 export const movies: readonly Movie[] = [
   {
@@ -16,6 +17,7 @@ export const movies: readonly Movie[] = [
       { href: "/people/leonidas", label: "레오니다스" },
       { href: "/polis/sparta", label: "스파르타" },
       { href: "/army", label: "군대" },
+      { href: `${PERSIA_URL}/movies#300`, label: "페르시아이야기 · 300" },
     ],
   },
   {
@@ -32,6 +34,7 @@ export const movies: readonly Movie[] = [
       { href: "/wars/persian-wars", label: "페르시아 전쟁" },
       { href: "/people/themistocles", label: "테미스토클레스" },
       { href: "/army#trireme", label: "삼단노선" },
+      { href: `${PERSIA_URL}/movies#300-rise`, label: "페르시아이야기 · 300: 제국의 부활" },
     ],
   },
   {
@@ -48,6 +51,8 @@ export const movies: readonly Movie[] = [
       { href: "/origins", label: "시대" },
       { href: "/people/homer", label: "호메로스" },
       { href: "/myth-links", label: "신화 연결" },
+      { href: `${MYTH_URL}/in-media#troy-2004`, label: "나두신화 · 영화 트로이" },
+      { href: ILIAD_URL, label: "일리아스이야기" },
     ],
   },
   {
@@ -64,6 +69,9 @@ export const movies: readonly Movie[] = [
       { href: "/people/alexander", label: "알렉산드로스" },
       { href: "/people/philip-ii", label: "필리포스 2세" },
       { href: "/wars/alexander-campaigns", label: "원정" },
+      { href: `${PERSIA_URL}/movies#alexander-2004`, label: "페르시아이야기 · 알렉산더" },
+      { href: `${EGYPT_URL}/movies#alexander-2004`, label: "이집트이야기 · 알렉산더" },
+      { href: `${PHILOSOPHY_URL}/films#films-aristotle`, label: "철학이야기 · 아리스토텔레스와 영화" },
     ],
   },
   {
@@ -80,6 +88,8 @@ export const movies: readonly Movie[] = [
       { href: "/daily#agora", label: "아고라" },
       { href: "/map#alexandria", label: "알렉산드리아" },
       { href: "/origins#hellenistic", label: "헬레니즘" },
+      { href: `${PHILOSOPHY_URL}/people/hypatia`, label: "철학이야기 · 히파티아" },
+      { href: `${PHILOSOPHY_URL}/films#films-hypatia`, label: "철학이야기 · 영화 아고라" },
     ],
   },
   {
@@ -96,6 +106,7 @@ export const movies: readonly Movie[] = [
       { href: "/people/homer", label: "호메로스" },
       { href: "/myth-links", label: "신화 연결" },
       { href: "/origins", label: "시대" },
+      { href: `${MYTH_URL}/in-media#the-odyssey-2026`, label: "나두신화 · 영화 오디세이" },
     ],
   },
   {
@@ -153,7 +164,10 @@ export const movies: readonly Movie[] = [
     fiction:
       "배경은 대공황기의 미시시피입니다. 키클롭스나 세이렌에 해당하는 장면도 미국 이야기로 바뀝니다. 그리스 역사와 지리의 자료가 아니고, 그렇게 쓰려고 만든 영화도 아닙니다.",
     topics: ["myth"],
-    links: [{ href: "/myth-links", label: "오디세이아 연결" }],
+    links: [
+      { href: "/myth-links", label: "오디세이아 연결" },
+      { href: `${MYTH_URL}/in-media#o-brother-2000`, label: "나두신화 · 오 형제여 어디에 있는가" },
+    ],
   },
 ];
 

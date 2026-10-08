@@ -1,4 +1,5 @@
 import type { Person } from "@/data/types";
+import { EGYPT_URL, ILIAD_URL, MYTH_URL, PERSIA_URL, PHILOSOPHY_HOMER_URL, PHILOSOPHY_URL, TIMELINE_URL } from "@/lib/site";
 
 export const people: readonly Person[] = [
   {
@@ -30,6 +31,10 @@ export const people: readonly Person[] = [
     related: [
       { href: "/origins#mycenaean", label: "미케네와 시의 간격" },
       { href: "/myth-links", label: "신화 연결" },
+      { href: `${MYTH_URL}/stories/trojan-war`, label: "나두신화 · 트로이 전쟁" },
+      { href: `${TIMELINE_URL}/events/homeric-epics`, label: "나두연표 · 호메로스의 서사시" },
+      { href: ILIAD_URL, label: "일리아스이야기" },
+      { href: PHILOSOPHY_HOMER_URL, label: "철학이야기 · 호메로스" },
     ],
   },
   {
@@ -160,6 +165,7 @@ export const people: readonly Person[] = [
       { href: "/wars/persian-wars", label: "페르시아 전쟁" },
       { href: "/polis/sparta", label: "스파르타" },
       { href: "/army", label: "중장보병" },
+      { href: `${PERSIA_URL}/wars/xerxes-invasion`, label: "페르시아이야기 · 크세르크세스의 침공" },
     ],
   },
   {
@@ -193,6 +199,7 @@ export const people: readonly Person[] = [
       { href: "/wars/persian-wars", label: "페르시아 전쟁" },
       { href: "/army#trireme", label: "삼단노선" },
       { href: "/polis/athens", label: "아테네" },
+      { href: `${PERSIA_URL}/rulers/artaxerxes-i`, label: "페르시아이야기 · 아르타크세르크세스 1세" },
     ],
   },
   {
@@ -298,6 +305,8 @@ export const people: readonly Person[] = [
       { href: "/people/plato", label: "플라톤" },
       { href: "/polis/athens", label: "아테네" },
       { href: "/wars/peloponnesian-war", label: "전쟁 패배 뒤의 정치" },
+      { href: `${PHILOSOPHY_URL}/people/socrates`, label: "철학이야기 · 소크라테스" },
+      { href: `${TIMELINE_URL}/events/trial-of-socrates`, label: "나두연표 · 소크라테스 재판" },
     ],
   },
   {
@@ -333,6 +342,7 @@ export const people: readonly Person[] = [
       { href: "/people/socrates", label: "소크라테스" },
       { href: "/daily#symposium", label: "향연은 대화편의 무대" },
       { href: "/polis/syracuse", label: "시라쿠사" },
+      { href: `${PHILOSOPHY_URL}/people/plato`, label: "철학이야기 · 플라톤" },
     ],
   },
   {
@@ -367,6 +377,7 @@ export const people: readonly Person[] = [
       { href: "/wars/chaeronea", label: "카이로네이아" },
       { href: "/people/alexander", label: "알렉산드로스" },
       { href: "/map#macedonia", label: "마케도니아" },
+      { href: `${PHILOSOPHY_URL}/people/aristotle`, label: "철학이야기 · 아리스토텔레스" },
     ],
   },
   {
@@ -404,6 +415,9 @@ export const people: readonly Person[] = [
       { href: "/wars/alexander-campaigns", label: "원정" },
       { href: "/people/philip-ii", label: "필리포스 2세" },
       { href: "/origins#hellenistic", label: "헬레니즘" },
+      { href: `${PERSIA_URL}/wars/alexander`, label: "페르시아이야기 · 알렉산드로스의 원정" },
+      { href: `${EGYPT_URL}/wars/alexander`, label: "이집트이야기 · 알렉산드로스" },
+      { href: `${PHILOSOPHY_URL}/people/aristotle`, label: "철학이야기 · 아리스토텔레스" },
     ],
   },
 ];

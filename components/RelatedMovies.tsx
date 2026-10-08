@@ -15,11 +15,23 @@ export function MovieCard({ movie }: { movie: Movie }) {
       <p className="mt-2 text-sm leading-7 text-muted">{movie.fiction}</p>
       {movie.links.length ? (
         <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm">
-          {movie.links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-olive underline decoration-line underline-offset-4 hover:text-aegean">
-              {link.label}
-            </Link>
-          ))}
+          {movie.links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link key={`${link.href}-${link.label}`} href={link.href} className="text-olive underline decoration-line underline-offset-4 hover:text-aegean">
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={`${link.href}-${link.label}`}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-olive underline decoration-line underline-offset-4 hover:text-aegean"
+              >
+                {link.label}
+              </a>
+            ),
+          )}
         </p>
       ) : null}
     </li>

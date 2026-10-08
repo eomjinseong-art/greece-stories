@@ -1,4 +1,5 @@
 import type { War } from "@/data/types";
+import { EGYPT_URL, PERSIA_URL } from "@/lib/site";
 
 export const wars: readonly War[] = [
   {
@@ -30,6 +31,8 @@ export const wars: readonly War[] = [
       { href: "/people/leonidas", label: "레오니다스" },
       { href: "/people/themistocles", label: "테미스토클레스" },
       { href: "/polis/miletus", label: "이오니아 반란의 밀레토스" },
+      { href: `${PERSIA_URL}/wars/marathon`, label: "페르시아이야기 · 마라톤" },
+      { href: `${PERSIA_URL}/rulers/xerxes-i`, label: "페르시아이야기 · 크세르크세스 1세" },
     ],
   },
   {
@@ -189,6 +192,8 @@ export const wars: readonly War[] = [
       { href: "/map#alexandria", label: "알렉산드리아" },
       { href: "/origins#hellenistic", label: "헬레니즘" },
       { href: "/family-tree?tree=successors", label: "후계 왕조" },
+      { href: `${PERSIA_URL}/rulers/darius-iii`, label: "페르시아이야기 · 다리우스 3세" },
+      { href: `${EGYPT_URL}/wars/alexander`, label: "이집트이야기 · 알렉산드로스" },
     ],
   },
 ];
