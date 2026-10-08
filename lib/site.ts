@@ -63,6 +63,7 @@ export const NAV = [
   { href: "/map", label: "지도" },
   { href: "/polis", label: "폴리스" },
   { href: "/people", label: "인물" },
+  { href: "/family-tree", label: "가족관계도" },
   { href: "/wars", label: "전쟁" },
   { href: "/daily", label: "일상" },
   { href: "/army", label: "군대" },
@@ -95,6 +96,12 @@ export const HOME_SECTIONS = [
     en: "People",
     title: "인물",
     desc: "솔론, 페리클레스, 레오니다스, 알렉산드로스. 소크라테스와 플라톤은 글의 성격을 구분해 적습니다.",
+  },
+  {
+    href: "/family-tree",
+    en: "Family Tree",
+    title: "가족관계도",
+    desc: "마케도니아 왕가, 후계 왕조, 트로이 영웅의 전승, 아테네 알크메온 집안. 신의 가계는 나두신화로 넘깁니다.",
   },
   {
     href: "/wars",

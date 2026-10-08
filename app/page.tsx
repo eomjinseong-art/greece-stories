@@ -21,6 +21,7 @@ const PATH = [
   { href: "/people/pericles", label: "페리클레스 시대의 연설은 녹음이 아닙니다" },
   { href: "/wars/peloponnesian-war", label: "아테네와 스파르타가 싸운 이유" },
   { href: "/people/alexander", label: "알렉산드로스 원정 뒤 무엇이 갈라졌나" },
+  { href: "/family-tree", label: "왕가와 전승 가문은 가족관계도로" },
   { href: "/myth-links", label: "신화 본문은 나두신화로" },
 ];
 

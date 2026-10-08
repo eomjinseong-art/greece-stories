@@ -20,7 +20,7 @@ async function loadFont(text: string) {
 export default async function OpenGraphImage() {
   const title = "그리스이야기";
   const sub = "어려운 그리스 역사를, 짧은 한국어로";
-  const font = await loadFont(`${title}${sub}GREECE STORIES 시대 폴리스 전쟁 일상`);
+  const font = await loadFont(`${title}${sub}GREECE STORIES 시대 폴리스 인물 가족 전쟁 일상`);
   return new ImageResponse(
     (
       <div
@@ -41,7 +41,7 @@ export default async function OpenGraphImage() {
         <div style={{ color: "#1a5278", fontSize: 28, letterSpacing: 8 }}>GREECE STORIES</div>
         <div style={{ marginTop: 20, fontSize: 92 }}>{title}</div>
         <div style={{ marginTop: 18, fontSize: 34, color: "#5c6670" }}>{sub}</div>
-        <div style={{ marginTop: 36, fontSize: 26, color: "#3e5340" }}>시대 · 폴리스 · 인물 · 전쟁 · 일상 · 신화</div>
+        <div style={{ marginTop: 36, fontSize: 26, color: "#3e5340" }}>시대 · 폴리스 · 인물 · 가족 · 전쟁 · 일상</div>
       </div>
     ),
     {
