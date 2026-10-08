@@ -204,12 +204,12 @@ export const regions: readonly Region[] = [
           "그리스인, 이집트인, 유대인이 한 도시에 살았습니다. 갈등이 없었던 것은 아닙니다.",
         ],
         more: [
-          "이 도시의 정치를 로마와 겹쳐 보려면 [로마이야기의 클레오파트라](https://rome-stories.vercel.app/cleopatra)가 맞습니다. 이집트 자체의 긴 역사는 자매 사이트 [이집트이야기](https://egypt-stories.vercel.app) 쪽입니다.",
+          "이 도시의 정치를 로마와 겹쳐 보려면 [로마이야기의 클레오파트라](https://rome-stories.vercel.app/cleopatra)가 맞습니다. 이집트 자체의 긴 역사는 자매 사이트 [이집트이야기의 프톨레마이오스 시대](https://egypt-stories.vercel.app/origins#ptolemaic) 쪽입니다.",
           "영화 [아고라](/movies#agora)는 서기 415년 무렵의 히파티아를 다룹니다. 알렉산드로스가 도시를 세운 때와는 700년 가까이 떨어져 있습니다.",
         ],
         links: [
           { href: "/wars/alexander-campaigns", label: "알렉산드로스의 원정" },
-          { href: "https://egypt-stories.vercel.app", label: "이집트이야기" },
+          { href: "https://egypt-stories.vercel.app/origins#ptolemaic", label: "이집트이야기 · 프톨레마이오스 시대" },
         ],
       },
     ],

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { Elsewhere } from "@/components/Elsewhere";
 import {
   LINE_LEGEND,
   TREES,
@@ -341,6 +342,7 @@ export function FamilyTreeView() {
             <PeopleRow label="전승으로 갈리는 자녀" people={relations.variantChildren} onPick={(id) => choose(tree.id, id)} />
             <PeopleRow label="형제·자매" people={relations.siblings} onPick={(id) => choose(tree.id, id)} />
           </div>
+          <Elsewhere links={selectedNode.also} />
           <div className="mt-3 flex flex-wrap gap-2">
             {selectedNode.href ? <PersonLink href={selectedNode.href} label={selectedNode.linkLabel ?? "인물 페이지"} /> : null}
             <button
@@ -361,7 +363,7 @@ function PersonLink({ href, label }: { href: string; label: string }) {
   const className = "rounded-full bg-aegean px-3 py-1.5 text-sm text-white hover:bg-aegean-deep";
   if (href.startsWith("http")) {
     return (
-      <a href={href} className={className} rel="noopener noreferrer">
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
         {label}
       </a>
     );
@@ -449,6 +451,7 @@ function TreeCard({
             href={node.href}
             className="absolute bottom-1 right-1 z-10 rounded bg-white/90 px-1 text-[10px] leading-4 text-aegean underline"
             aria-label={`${node.ko} ${node.linkLabel ?? "이집트이야기"}`}
+            target="_blank"
             rel="noopener noreferrer"
           >
             이집트

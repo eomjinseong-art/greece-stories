@@ -9,9 +9,11 @@
  * 2. col은 가문 전체에서 같은 가로 좌표입니다. 같은 줄의 col 차이는 1 이상으로 둡니다.
  * 3. 부모는 자식보다 위 세대에 두고 parent()로 잇습니다. 부부은 같은 줄에서 이웃하게 둡니다.
  * 4. 이 사이트의 /people/[slug] 가 있으면 slug를 넣습니다.
+ * 5. 다른 사이트의 글은 also에 { href, label }로 넣습니다. '다른 사이트에서 더 보기'에 나옵니다.
  */
 
-import { EGYPT_URL } from "@/lib/site";
+import type { LinkItem } from "@/data/types";
+import { EGYPT_URL, MYTH_URL } from "@/lib/site";
 
 export const TREE_IDS = ["macedon", "successors", "trojan", "athens"] as const;
 export type TreeId = (typeof TREE_IDS)[number];
@@ -38,6 +40,8 @@ export type TreeSeed = {
   note?: string;
   legend?: boolean;
   aliases?: string[];
+  /** Extra pages on sister sites. The chart keeps a single primary href. */
+  also?: readonly LinkItem[];
 };
 
 export type TreeLink = { from: string; to: string; kind: LinkKind };
@@ -632,6 +636,7 @@ const SPECS: TreeSpec[] = [
         years: "이집트 왕 기원전 305–282년. 총독으로는 323년부터입니다.",
         summary: "알렉산드로스의 부하로, 이집트를 맡아 기원전 305년 왕을 칭한 프톨레마이오스 1세 소테르입니다.",
         note: "이집트의 그 다음 역사와 클레오파트라 7세는 이집트이야기에 있습니다. 여기에는 첫 아들까지만 그립니다.",
+        also: [{ href: `${EGYPT_URL}/family-tree?tab=ptolemy&focus=ptolemy-i`, label: "이집트이야기 · 프톨레마이오스 가계" }],
         aliases: ["ptolemy", "ptolemy i", "ptolemy soter", "프톨레마이오스", "프톨레마이오스 1세"],
       },
       {
@@ -854,6 +859,7 @@ const SPECS: TreeSpec[] = [
         col: 0,
         y: 280,
         summary: "미케네의 왕으로, 그리스 쪽 군대를 이끈 인물로 전합니다. 클리타임네스트라의 남편입니다.",
+        also: [{ href: `${MYTH_URL}/gods/agamemnon`, label: "나두신화 · 아가멤논" }],
         aliases: ["agamemnon", "아가멤논"],
       },
       {
@@ -888,6 +894,7 @@ const SPECS: TreeSpec[] = [
         y: 280,
         summary: "메넬라오스의 아내로 전하는 헬레네입니다. 파리스가 트로이로 데려갔다는 이야기가 전쟁의 구실이 됩니다.",
         note: "『일리아스』는 헬레네를 제우스의 딸이라고도 부릅니다. 이 그림의 배우자 선은 메넬라오스와의 혼인만 잇고, 파리스와는 잇지 않습니다.",
+        also: [{ href: `${MYTH_URL}/gods/helene`, label: "나두신화 · 헬레네" }],
         aliases: ["helen", "helene", "helena", "헬레네", "헬렌"],
       },
       {
@@ -899,6 +906,7 @@ const SPECS: TreeSpec[] = [
         col: 6.6,
         y: 280,
         summary: "펠레우스와 테티스의 아들입니다. 『일리아스』는 그의 분노를 전쟁의 한복판에 둡니다.",
+        also: [{ href: `${MYTH_URL}/gods/achilleus`, label: "나두신화 · 아킬레우스" }],
         aliases: ["achilles", "akhilleus", "아킬레우스", "아킬레스"],
       },
       {
@@ -947,6 +955,7 @@ const SPECS: TreeSpec[] = [
         y: 280,
         summary: "프리아모스와 헤카베의 아들로, 트로이 방어의 중심인 영웅입니다.",
         note: "아내 안드로마케와 아들 아스티아낙스는 이 그림에 넣지 않았습니다.",
+        also: [{ href: `${MYTH_URL}/gods/hektor`, label: "나두신화 · 헥토르" }],
         aliases: ["hector", "hektor", "헥토르", "헥토르"],
       },
       {
@@ -959,6 +968,7 @@ const SPECS: TreeSpec[] = [
         y: 280,
         summary: "프리아모스와 헤카베의 아들입니다. 헬레네를 트로이로 데려간 인물로 전합니다.",
         note: "다른 이름은 알렉산드로스입니다. 마케도니아 왕 알렉산드로스와는 다른 사람입니다.",
+        also: [{ href: `${MYTH_URL}/gods/paris`, label: "나두신화 · 파리스" }],
         aliases: ["paris", "파리스", "alexandros of troy"],
       },
       {

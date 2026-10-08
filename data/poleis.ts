@@ -1,4 +1,5 @@
 import type { Polis } from "@/data/types";
+import { CHOSEN_URL, ROME_URL } from "@/lib/site";
 
 export const poleis: readonly Polis[] = [
   {
@@ -101,6 +102,8 @@ export const poleis: readonly Polis[] = [
       { href: "/polis/syracuse", label: "시라쿠사" },
       { href: "/wars/peloponnesian-war", label: "펠로폰네소스 전쟁" },
       { href: "/wars/corinthian-war", label: "코린토스 전쟁" },
+      { href: `${ROME_URL}/wars/macedonian-wars`, label: "로마이야기 · 마케도니아 전쟁" },
+      { href: `${CHOSEN_URL}/bible-books/1-corinthians`, label: "더 초즌 · 고린도전서" },
     ],
   },
   {
@@ -221,7 +224,7 @@ export const poleis: readonly Polis[] = [
     more: [
       "시칠리아에는 그리스 도시만 있지 않았습니다. 카르타고와 연결된 도시, 원주민 공동체가 같이 있었습니다. 시라쿠사의 팽창은 그 사이에서의 전쟁입니다.",
       "디오니시오스 1세는 기원전 4세기 초의 참주로, 성벽을 늘리고 용병과 새 무기를 썼다고 전합니다. 플라톤이 시라쿠사 정치에 관여했다는 이야기는 편지의 진위가 논쟁적이라 [플라톤](/people/plato)에서 조심해서 다룹니다.",
-      "로마가 이 도시를 차지하는 것은 기원전 212년, 포에니 전쟁 중입니다. 아르키메데스가 그 공성 때 죽었다는 이야기가 플루타르코스 등에 있습니다. 그 일화의 세부도 후대입니다. 로마 쪽 전쟁은 [로마이야기](https://rome-stories.vercel.app/wars)에서 이어 읽습니다.",
+      "로마가 이 도시를 차지하는 것은 기원전 212년, 포에니 전쟁 중입니다. 아르키메데스가 그 공성 때 죽었다는 이야기가 플루타르코스 등에 있습니다. 그 일화의 세부도 후대입니다. 로마 쪽 전쟁은 [로마이야기의 제2차 포에니 전쟁](https://rome-stories.vercel.app/wars/second-punic-war)에서 이어 읽습니다.",
     ],
     sources: [
       { work: "투키디데스", ref: "6–7권. 시칠리아 원정" },
