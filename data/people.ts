@@ -124,6 +124,7 @@ export const people: readonly Person[] = [
     ],
     movieSlugs: [],
     related: [
+      { href: "/family-tree?focus=cleisthenes", label: "가족관계도" },
       { href: "/people/solon", label: "앞선 개혁, 솔론" },
       { href: "/people/pericles", label: "페리클레스" },
       { href: "/polis/athens", label: "아테네" },
@@ -224,6 +225,7 @@ export const people: readonly Person[] = [
     ],
     movieSlugs: [],
     related: [
+      { href: "/family-tree?focus=pericles", label: "가족관계도" },
       { href: "/polis/athens", label: "아테네" },
       { href: "/wars/peloponnesian-war", label: "펠로폰네소스 전쟁" },
       { href: "/daily#women", label: "시민법과 여성" },
@@ -257,6 +259,7 @@ export const people: readonly Person[] = [
     ],
     movieSlugs: [],
     related: [
+      { href: "/family-tree?focus=alcibiades", label: "가족관계도" },
       { href: "/wars/peloponnesian-war", label: "펠로폰네소스 전쟁" },
       { href: "/polis/syracuse", label: "시라쿠사" },
       { href: "/people/socrates", label: "소크라테스" },
@@ -360,6 +363,7 @@ export const people: readonly Person[] = [
     ],
     movieSlugs: ["alexander"],
     related: [
+      { href: "/family-tree?focus=philip-ii", label: "가족관계도" },
       { href: "/wars/chaeronea", label: "카이로네이아" },
       { href: "/people/alexander", label: "알렉산드로스" },
       { href: "/map#macedonia", label: "마케도니아" },
@@ -396,6 +400,7 @@ export const people: readonly Person[] = [
     ],
     movieSlugs: ["alexander"],
     related: [
+      { href: "/family-tree?focus=alexander", label: "가족관계도" },
       { href: "/wars/alexander-campaigns", label: "원정" },
       { href: "/people/philip-ii", label: "필리포스 2세" },
       { href: "/origins#hellenistic", label: "헬레니즘" },

@@ -164,11 +164,12 @@ export const regions: readonly Region[] = [
         ],
         more: [
           "베르기나의 무덤은 왕가의 것으로 널리 알려졌습니다. 어느 무덤이 필리포스 2세인지는 연구자 사이에 이견이 있어, 이 사이트는 단정하지 않습니다.",
-          "사람은 [필리포스 2세](/people/philip-ii)와 [알렉산드로스](/people/alexander), 전쟁은 [카이로네이아](/wars/chaeronea)와 [원정](/wars/alexander-campaigns)입니다.",
+          "사람은 [필리포스 2세](/people/philip-ii)와 [알렉산드로스](/people/alexander), 전쟁은 [카이로네이아](/wars/chaeronea)와 [원정](/wars/alexander-campaigns)입니다. 왕가의 칸은 [가족관계도](/family-tree?tree=macedon)에 있습니다.",
         ],
         links: [
           { href: "/people/philip-ii", label: "필리포스 2세" },
           { href: "/people/alexander", label: "알렉산드로스" },
+          { href: "/family-tree?tree=macedon", label: "가족관계도" },
         ],
       },
     ],

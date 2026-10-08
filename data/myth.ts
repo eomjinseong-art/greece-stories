@@ -192,6 +192,8 @@ export const compareLinks: readonly LinkItem[] = [
 ];
 
 export const mythLinks: readonly LinkItem[] = [
+  { href: "/family-tree?tree=trojan", label: "가족관계도 · 트로이 영웅" },
+  { href: `${MYTH}/family-tree`, label: "나두신화 · 신들의 가족관계도" },
   { href: `${MYTH}/greece-vs-rome`, label: "나두신화 · 그리스 vs 로마" },
   { href: `${MYTH}/stories/trojan-war`, label: "나두신화 · 트로이 전쟁" },
   { href: `${MYTH}/stories/odyssey`, label: "나두신화 · 오디세이아" },

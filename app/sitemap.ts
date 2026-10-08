@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/map",
     "/polis",
     "/people",
+    "/family-tree",
     "/wars",
     "/daily",
     "/army",
