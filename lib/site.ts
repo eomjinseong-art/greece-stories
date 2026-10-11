@@ -16,6 +16,12 @@ export const ILIAD_NAME = "일리아스이야기";
 export const ROME_URL = "https://rome-stories.vercel.app";
 export const ROME_NAME = "로마이야기";
 
+export const GERMANIC_URL = "https://germanic-stories.vercel.app";
+export const GERMANIC_NAME = "게르만이야기";
+
+export const VIKING_URL = "https://viking-stories.vercel.app";
+export const VIKING_NAME = "바이킹이야기";
+
 export const EGYPT_URL = "https://egypt-stories.vercel.app";
 export const EGYPT_NAME = "이집트이야기";
 
@@ -32,6 +38,9 @@ export const PHILOSOPHY_HOMER_URL = `${PHILOSOPHY_URL}/people/homer`;
 
 export const KOREA_URL = "https://korea-stories.vercel.app";
 export const KOREA_NAME = "대한민국이야기";
+
+export const WORLD_URL = "https://nadoo-world.vercel.app";
+export const WORLD_NAME = "나두세계";
 
 export const TIMELINE_URL = "https://nadoo-timeline.vercel.app";
 export const TIMELINE_NAME = "나두연표";
@@ -71,6 +80,22 @@ export const SISTERS = [
     button: ROME_NAME,
     note: "왕정·공화정·제정, 포에니 전쟁, 클레오파트라.",
     body: "왕정·공화정·제정, 포에니 전쟁, 클레오파트라. 그리스 폴리스가 로마의 속주가 된 뒤의 이야기입니다.",
+  },
+  {
+    href: GERMANIC_URL,
+    name: GERMANIC_NAME,
+    en: "GERMANIC",
+    button: GERMANIC_NAME,
+    note: "토이토부르크부터 카롤루스 대제까지, 로마에 맞선 숲의 사람들.",
+    body: "로마 국경 너머 게르만 부족들의 이야기입니다. 그리스가 로마의 속주가 된 뒤, 제국의 북쪽 국경에서 이어 읽습니다.",
+  },
+  {
+    href: VIKING_URL,
+    name: VIKING_NAME,
+    en: "VIKINGS",
+    button: VIKING_NAME,
+    note: "린디스판부터 노르망디·빈란드까지, 롱쉽의 시대.",
+    body: "바이킹 시대의 북유럽입니다. 바랑기아 친위대는 그리스어를 쓰던 비잔티움 황제를 지켰습니다.",
   },
   {
     href: EGYPT_URL,
@@ -113,6 +138,14 @@ export const SISTERS = [
     body: "그리스 폴리스와 같은 시대에 한반도에서는 어떤 왕조가 있었는지, 그 역사는 이쪽에서 읽습니다.",
   },
   {
+    href: WORLD_URL,
+    name: WORLD_NAME,
+    en: "WORLD",
+    button: WORLD_NAME,
+    note: "나두의 세계 이야기를 한곳에서.",
+    body: "여러 나라와 시대의 이야기를 한곳에서 둘러봅니다.",
+  },
+  {
     href: TIMELINE_URL,
     name: TIMELINE_NAME,
     en: "TIMELINE",
@@ -126,13 +159,15 @@ export const SISTERS = [
     en: "HUB",
     button: HUB_NAME,
     note: "나두의 역사·신화 사이트를 한곳에.",
-    body: "신화, 그리스, 로마, 성경, 한반도를 한 목록에서 고릅니다.",
+    body: "신화, 그리스, 로마, 게르만, 바이킹, 성경, 한반도를 한 목록에서 고릅니다.",
   },
 ] as const;
 
 export const OTHER_FAMILY_TREES = [
   { href: `${MYTH_URL}/family-tree`, name: MYTH_NAME, en: "Myth" },
   { href: `${ROME_URL}/family-tree`, name: ROME_NAME, en: "Rome" },
+  { href: `${GERMANIC_URL}/family-tree`, name: GERMANIC_NAME, en: "Germanic" },
+  { href: `${VIKING_URL}/family-tree`, name: VIKING_NAME, en: "Vikings" },
   { href: `${EGYPT_URL}/family-tree`, name: EGYPT_NAME, en: "Egypt" },
   { href: `${PERSIA_URL}/family-tree`, name: PERSIA_NAME, en: "Persia" },
   { href: `${CHOSEN_URL}/family-tree`, name: CHOSEN_NAME, en: "The Chosen" },
@@ -142,6 +177,8 @@ export const OTHER_FAMILY_TREES = [
 export const OTHER_FILMS = [
   { href: `${MYTH_URL}/in-media`, name: MYTH_NAME, en: "Myth" },
   { href: `${ROME_URL}/movies`, name: ROME_NAME, en: "Rome" },
+  { href: `${GERMANIC_URL}/films`, name: GERMANIC_NAME, en: "Germanic" },
+  { href: `${VIKING_URL}/films`, name: VIKING_NAME, en: "Vikings" },
   { href: `${EGYPT_URL}/movies`, name: EGYPT_NAME, en: "Egypt" },
   { href: `${PERSIA_URL}/movies`, name: PERSIA_NAME, en: "Persia" },
   { href: `${CHOSEN_URL}/together`, name: CHOSEN_NAME, en: "The Chosen" },
