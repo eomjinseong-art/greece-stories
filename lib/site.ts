@@ -42,6 +42,9 @@ export const KOREA_NAME = "대한민국이야기";
 export const WORLD_URL = "https://nadoo-world.vercel.app";
 export const WORLD_NAME = "나두세계";
 
+export const ARTS_URL = "https://nadoo-arts.vercel.app";
+export const ARTS_NAME = "나두예술";
+
 export const TIMELINE_URL = "https://nadoo-timeline.vercel.app";
 export const TIMELINE_NAME = "나두연표";
 
@@ -144,6 +147,14 @@ export const SISTERS = [
     button: WORLD_NAME,
     note: "나두의 세계 이야기를 한곳에서.",
     body: "여러 나라와 시대의 이야기를 한곳에서 둘러봅니다.",
+  },
+  {
+    href: ARTS_URL,
+    name: ARTS_NAME,
+    en: "ARTS",
+    button: ARTS_NAME,
+    note: "신화와 고대를 그린 화가들, 이탈리아·프랑스 음악.",
+    body: "다비드와 푸생이 그린 고대, 라파엘로의 ‘아테네 학당’. 그림과 음악 이야기는 이쪽에서 읽습니다.",
   },
   {
     href: TIMELINE_URL,
