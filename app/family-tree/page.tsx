@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
 import { FamilyTreeView } from "@/components/FamilyTreeView";
+import { TreePanel } from "@/components/TreePanel";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
 import { OtherFamilyTrees } from "@/components/SisterSites";
@@ -76,6 +77,7 @@ export default function FamilyTreePage() {
           그림과 같은 관계입니다. 이름을 누르면 그 가문의 칸으로 이동합니다. 이 사이트에 인물 페이지가 있는 이름은 따로 링크했습니다.
         </p>
         {TREES.map((tree) => (
+          <TreePanel key={tree.id} id={tree.id} defaultId={"macedon"}>
           <section key={tree.id} className="mt-8" aria-labelledby={`read-${tree.id}`}>
             <h3 id={`read-${tree.id}`} className="font-serif text-xl text-ink">
               {tree.ko} <span className="text-sm font-sans tracking-wide text-aegean">{tree.en}</span>
@@ -141,6 +143,7 @@ export default function FamilyTreePage() {
               </section>
             ))}
           </section>
+          </TreePanel>
         ))}
       </section>
 
