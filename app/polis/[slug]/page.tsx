@@ -12,6 +12,7 @@ import { Rich } from "@/components/Rich";
 import { SourceList } from "@/components/SourceList";
 import { polisBySlug, poleis } from "@/data/poleis";
 import { articleLd, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function generateStaticParams() {
   return poleis.map((polis) => ({ slug: polis.slug }));
@@ -97,6 +98,7 @@ export default async function PolisDetailPage({ params }: { params: Promise<{ sl
         prev={prev ? { href: `/polis/${prev.slug}`, label: prev.nameKo } : undefined}
         next={next ? { href: `/polis/${next.slug}`, label: next.nameKo } : undefined}
       />
+      <CoupangCard />
     </article>
   );
 }
