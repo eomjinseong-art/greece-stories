@@ -5,6 +5,7 @@ import { PageHead } from "@/components/PageHead";
 import { OtherFilms } from "@/components/SisterSites";
 import { movies } from "@/data/movies";
 import { breadcrumbLd, itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { NadooHubFilmsLink } from "@/components/NadooHubLink";
 
 export const metadata = pageMetadata({
   title: "관련 영화",
@@ -40,6 +41,7 @@ export default function MoviesPage() {
           <MovieCard key={movie.slug} movie={movie} />
         ))}
       </ul>
+      <NadooHubFilmsLink />
     </div>
   );
 }
