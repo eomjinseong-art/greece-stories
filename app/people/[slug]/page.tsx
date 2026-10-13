@@ -13,6 +13,7 @@ import { SourceList } from "@/components/SourceList";
 import { people, personBySlug } from "@/data/people";
 import { articleLd, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { NadooHubPersonLink } from "@/components/NadooHubLink";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function generateStaticParams() {
   return people.map((person) => ({ slug: person.slug }));
@@ -107,6 +108,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
         next={next ? { href: `/people/${next.slug}`, label: next.nameKo } : undefined}
       />
       <NadooHubPersonLink base="https://greece-stories.vercel.app/people/" slug={person.slug!} />
+      <CoupangCard />
     </article>
   );
 }
