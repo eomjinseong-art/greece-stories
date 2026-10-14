@@ -206,6 +206,7 @@ export const NAV = [
   { href: "/people", label: "인물" },
   { href: "/family-tree", label: "가족관계도" },
   { href: "/wars", label: "전쟁" },
+  { href: "/generals", label: "장군" },
   { href: "/daily", label: "일상" },
   { href: "/army", label: "군대" },
   { href: "/myth-links", label: "신과 전설" },
@@ -214,6 +215,12 @@ export const NAV = [
 ] as const;
 
 export const HOME_SECTIONS = [
+  {
+    href: "/generals",
+    en: "Generals",
+    title: "유명한 장군",
+    desc: "마라톤의 밀티아데스, 테르모필라이의 레오니다스, 살라미스의 테미스토클레스, 알렉산드로스까지 10명.",
+  },
   {
     href: "/origins",
     en: "Origins",
