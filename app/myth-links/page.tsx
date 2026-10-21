@@ -1,12 +1,13 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
 import { RelatedMovies } from "@/components/RelatedMovies";
-import { compareLinks, godLinks, mythIntro, mythLinks, storyLinks } from "@/data/myth";
+import { compareLinks, godLinks, mythIntro, mythLinks, storyLinks, troyFallIntro } from "@/data/myth";
 import { breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
-import { MYTH_NAME, MYTH_URL, ROME_NAME, ROME_URL } from "@/lib/site";
+import { ILIAD_NAME, MYTH_NAME, MYTH_URL, ROME_NAME, ROME_URL } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "신과 전설 연결",
@@ -58,15 +59,28 @@ export default function MythLinksPage() {
         <h2 className="font-serif text-2xl text-ink">이야기</h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {storyLinks.map((story) => (
-            <li key={story.slug} id={story.slug} className="scroll-mt-28 rounded-lg border border-line bg-card p-4">
-              <p className="text-[11px] tracking-[0.16em] text-aegean">{story.en}</p>
-              <h3 className="mt-1 font-serif text-xl text-ink">{story.title}</h3>
-              <p className="mt-2 text-sm leading-6">{story.summary}</p>
-              <p className="mt-2 text-sm text-muted">{story.note}</p>
-              <a href={story.href} className="mt-3 inline-block text-sm text-olive underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
-                {MYTH_NAME}에서 읽기
-              </a>
-            </li>
+            <Fragment key={story.slug}>
+              <li id={story.slug} className="scroll-mt-28 rounded-lg border border-line bg-card p-4">
+                <p className="text-[11px] tracking-[0.16em] text-aegean">{story.en}</p>
+                <h3 className="mt-1 font-serif text-xl text-ink">{story.title}</h3>
+                <p className="mt-2 text-sm leading-6">{story.summary}</p>
+                <p className="mt-2 text-sm text-muted">{story.note}</p>
+                <a href={story.href} className="mt-3 inline-block text-sm text-olive underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
+                  {MYTH_NAME}에서 읽기
+                </a>
+              </li>
+              {story.slug === "trojan-war" ? (
+                <li id={troyFallIntro.slug} className="scroll-mt-28 rounded-lg border border-line bg-card p-4">
+                  <p className="text-[11px] tracking-[0.16em] text-aegean">{troyFallIntro.en}</p>
+                  <h3 className="mt-1 font-serif text-xl text-ink">{troyFallIntro.title}</h3>
+                  <p className="mt-2 text-sm leading-6">{troyFallIntro.summary}</p>
+                  <p className="mt-2 text-sm text-muted">{troyFallIntro.note}</p>
+                  <a href={troyFallIntro.href} className="mt-3 inline-block text-sm text-olive underline decoration-line underline-offset-4 hover:text-aegean" rel="noopener noreferrer">
+                    {ILIAD_NAME}에서 읽기
+                  </a>
+                </li>
+              ) : null}
+            </Fragment>
           ))}
         </ul>
       </section>

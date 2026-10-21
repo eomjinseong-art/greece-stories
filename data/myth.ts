@@ -1,4 +1,5 @@
 import type { LinkItem } from "@/data/types";
+import { ILIAD_URL } from "@/lib/site";
 
 const MYTH = "https://nadoo-myth.vercel.app";
 
@@ -176,6 +177,16 @@ export const storyLinks: readonly MythCard[] = [
     note: "로마 이름 프로세르피나",
   },
 ];
+
+export const troyFallIntro = {
+  slug: "troy-fall-of-a-city",
+  en: "SERIES",
+  title: "트로이: 왕국의 몰락",
+  summary:
+    "2018년 BBC와 넷플릭스가 함께 만든 8부작입니다. 전쟁의 앞이야기에서 포위와 함락까지 이어 가며, 『일리아스』가 노래한 짧은 나날보다 넓은 연속극입니다. 시와 같은 자리와 드라마가 보탠 자리는 일리아스이야기에서 갈라 읽어 두면 됩니다.",
+  href: `${ILIAD_URL}/movies/troy-fall-of-a-city`,
+  note: "Troy: Fall of a City · 8화",
+} as const;
 
 export const compareLinks: readonly LinkItem[] = [
   { href: `${MYTH}/greece-vs-rome`, label: "그리스 vs 로마 전체" },
