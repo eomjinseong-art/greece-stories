@@ -39,6 +39,9 @@ export const PHILOSOPHY_HOMER_URL = `${PHILOSOPHY_URL}/people/homer`;
 export const KOREA_URL = "https://korea-stories.vercel.app";
 export const KOREA_NAME = "대한민국이야기";
 
+export const WORLDWARS_URL = "https://nadoo-worldwars.vercel.app";
+export const WORLDWARS_NAME = "세계대전이야기";
+
 export const WORLD_URL = "https://nadoo-world.vercel.app";
 export const WORLD_NAME = "나두세계";
 
@@ -139,6 +142,14 @@ export const SISTERS = [
     button: KOREA_NAME,
     note: "고조선부터 조선까지, 한반도의 왕과 시대.",
     body: "그리스 폴리스와 같은 시대에 한반도에서는 어떤 왕조가 있었는지, 그 역사는 이쪽에서 읽습니다.",
+  },
+  {
+    href: WORLDWARS_URL,
+    name: WORLDWARS_NAME,
+    en: "WORLD WARS",
+    button: WORLDWARS_NAME,
+    note: "1차·2차 세계대전의 진영, 연표, 전투.",
+    body: "고대 전쟁에서 한참 뒤, 20세기 두 번의 세계대전은 이쪽에서 요약과 지도로 읽습니다.",
   },
   {
     href: WORLD_URL,
