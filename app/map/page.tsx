@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,6 +30,7 @@ export default function MapPage() {
         title="지도"
         lead="그리스는 수도 하나의 나라 이름이 아니었습니다. 같은 말을 쓰는 도시국가와 성소, 북쪽 왕국, 바다 건너 새 도시가 모여 있었습니다. 경계는 세기마다 움직였습니다."
       />
+      <NadooAd inline />
       <div className="mt-8 space-y-12">
         {regions.map((region) => (
           <section key={region.id} id={region.id} className="scroll-mt-28">

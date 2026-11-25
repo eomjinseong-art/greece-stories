@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
@@ -79,6 +80,7 @@ export default function OriginsPage() {
           <GuideBlock key={era.id} id={era.id} en={era.en} title={era.title} summary={`${era.years}. ${era.summary}`} points={era.points} more={era.more} kind={era.kind} />
         ))}
       </div>
+      <NadooAd inline />
       <p className="mt-6 text-sm leading-7 text-muted">
         도시가 어디인지 같이 보려면{" "}
         <Link href="/map" className="text-olive underline decoration-line underline-offset-4 hover:text-aegean">

@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
@@ -147,6 +148,7 @@ export default function FamilyTreePage() {
         ))}
       </section>
 
+      <NadooAd inline />
       <section className="mt-12">
         <h2 className="font-serif text-2xl text-ink">연대와 다른 전승</h2>
         <p className="mt-2 max-w-3xl text-sm leading-7 text-muted">

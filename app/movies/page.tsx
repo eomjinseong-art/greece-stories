@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { MovieCard } from "@/components/RelatedMovies";
@@ -35,6 +36,7 @@ export default function MoviesPage() {
         title="관련 영화"
         lead="그리스를 처음 상상할 때 영화가 먼저인 경우가 많습니다. 제목은 실제로 나온 작품만 적었습니다. 각 카드는 왜 보면 좋은지, 어디가 창작인지 두 문단으로 나눕니다. 스트리밍 링크는 없습니다."
       />
+      <NadooAd inline />
       <OtherFilms />
       <ul className="mt-8 space-y-3">
         {movies.map((movie) => (

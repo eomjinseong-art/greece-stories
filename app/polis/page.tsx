@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -34,6 +35,7 @@ export default function PolisPage() {
         title="폴리스"
         lead="폴리스는 성벽 안의 동네만이 아닙니다. 도시와 들판과 시민권이 한 덩어리인 나라입니다. 아래 일곱은 전체를 대표하는 목록이 아니라, 길을 잡는 도시입니다. 델포이와 올림피아처럼 도시국가가 아닌 성소는 지도에 있습니다."
       />
+      <NadooAd inline />
       <ul className="mt-8 grid gap-3">
         {poleis.map((polis) => (
           <li key={polis.slug}>

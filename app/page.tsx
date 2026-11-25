@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { eras } from "@/data/eras";
@@ -71,6 +72,7 @@ export default function Home() {
         </div>
       </section>
 
+      <NadooAd inline />
       <section className="mt-12" aria-labelledby="menu-heading">
         <h2 id="menu-heading" className="font-serif text-2xl text-ink">
           모든 길
