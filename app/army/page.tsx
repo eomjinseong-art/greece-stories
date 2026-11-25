@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
@@ -30,6 +31,7 @@ export default function ArmyPage() {
         title="군대"
         lead="폴리스의 전쟁은 대개 자기 장비를 들고 나온 시민이 치렀습니다. 스파르타의 훈련, 아테네의 배, 마케도니아의 긴 창은 같은 ‘그리스 군대’가 아닙니다. 아래는 고전기 폴리스를 중심으로, 달라지는 지점만 표시합니다."
       />
+      <NadooAd inline />
       <div className="mt-8 space-y-4">
         {armyTopics.map((topic) => (
           <GuideBlock key={topic.id} id={topic.id} en={topic.en} title={topic.title} summary={topic.summary} points={topic.points} more={topic.more} kind="history" />

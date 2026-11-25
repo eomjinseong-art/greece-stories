@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -81,6 +82,7 @@ export default async function PolisDetailPage({ params }: { params: Promise<{ sl
           </p>
         ))}
       </More>
+      <NadooAd inline />
       <RelatedLinks links={polis.related} />
       {polis.movieSlugs.length ? (
         <RelatedMovies slugs={polis.movieSlugs} />

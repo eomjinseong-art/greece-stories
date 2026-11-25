@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -90,6 +91,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           </p>
         ))}
       </More>
+      <NadooAd inline />
       <RelatedLinks links={person.related} />
       {person.movieSlugs.length ? (
         <RelatedMovies slugs={person.movieSlugs} />

@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CauseGrid } from "@/components/CauseGrid";
@@ -35,6 +36,7 @@ export default function WarsPage() {
         title="전쟁"
         lead="폴리스의 지도는 연설보다 전쟁에서 자주 바뀌었습니다. 각 카드는 왜 싸웠는지, 누구와 싸웠는지, 끝나서 무엇이 바뀌었는지만 먼저 보여 줍니다. 트로이 전쟁은 역사 전쟁의 목록이 아니라 신화 연결에 두었습니다."
       />
+      <NadooAd inline />
       <ul className="mt-8 grid gap-4 lg:grid-cols-2">
         {wars.map((war) => (
           <li key={war.slug} className="rounded-lg border border-line bg-card p-5">

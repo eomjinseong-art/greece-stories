@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Fragment } from "react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -55,6 +56,7 @@ export default function MythLinksPage() {
         </ul>
       </section>
 
+      <NadooAd inline />
       <section className="mt-10">
         <h2 className="font-serif text-2xl text-ink">이야기</h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">

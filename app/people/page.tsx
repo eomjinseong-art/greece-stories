@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -34,6 +35,7 @@ export default function PeoplePage() {
         title="인물"
         lead="왕 명단도, 철학자 백과도 아닙니다. 제도가 바뀔 때 서 있던 사람들과, 기록이 얇은 이름을 같이 두었습니다. 소크라테스와 플라톤은 글의 종류가 다르므로 본문에 주의 상자를 붙였습니다."
       />
+      <NadooAd inline />
       <ul className="mt-8 grid gap-3">
         {people.map((person) => (
           <li key={person.slug}>
